@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - AIPrompts4me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- For icons -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">AIPrompts4me</div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="🔍 Search prompts..." 
+      onkeyup="filterPrompts()" 
+    />
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery-container">
+
+    <!-- Gallery Boxes -->
+    <div class="gallery-box">
+      <img src="/images/boys/Boy.png" alt="Image 2">
+      <div class="prompt" style="display: none;">
+        Create a 8k Hyper-realistic ,image using the uploaded face, pose, and background exactly as shown in the reference. The person with messy hair over the head is leaning casually on a vintage blue convertible car, dressed in a relaxed white loose shirt and white pants, under bright daylight with palm trees and sky in the background. Make sure the face matches the uploaded photo 100%, apply a stylish and modern hairstyle.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/boys/Boy1.png" alt="Image 1">
+      <div class="prompt" style="display: none;">
+       ultra realistic 8K mirror selfie of the same man as in the reference image with fair hair bright skin, late teens to early twenties, positioned slightly left of the center. He has well dark voluminous black hair. He wears a black jeans jacket and in black tank top.(Identical face, hairstyle and skin tone). His hands runs casually through his hair, partially covering his face. Wristwatch clearly visible, dark fitted top, chain necklace catching light
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+ 
+
+    <div class="gallery-box">
+      <img src="/images/boys/Boy2.png" alt="Image 3">
+      <div class="prompt" style="display: none;">
+        A cinematic full-length portrait in Slim Aarons' luxury lifestyle aesthetic. The indian man reclines on a sun lounger beside a pool at a Mediterranean villa, medium-dark skin tone, defined beard, voluminous hair slicked back. He wears a cream linen shirt, tailored shorts, and sunglasses. Shot at golden hour with sunlight reflecting off turquoise water, capturing aspirational leisure.Keep the face of the boy 100% exactly same as I uploaded the image. @aiprompts4u.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/boys/Boy3.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+        Ultra-realistic editorial portrait in SR, 9:16 format. The stylish young indian man perfectly styled voluminous hair holds his sunglasses near his lips in a charismatie pose, giving a confident side glance. Deep maroon jacket over black outfit, Ixury wristwateh visible. Dramatie cinematic lighting enhances textures and facial details, magazine cover quality. Keep the face 100% exactly same as I uploaded the image
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Modal -->
+  <div id="promptModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Prompt</h2>
+      <p id="modalPrompt"></p>
+      <button id="copyInModal" class="copy-btn" onclick="copyFromModal()">Copy Prompt</button>
+    </div>
+  </div>
+  <!-- Footer -->
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+      lucide.createIcons(); // render icons
+    });
+</script>
+ <!-- Footer End -->
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

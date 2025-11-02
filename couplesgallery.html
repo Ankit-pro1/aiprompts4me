@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - AIPrompts4me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- For icons -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">AIPrompts4me</div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="🔍 Search prompts..." 
+      onkeyup="filterPrompts()" 
+    />
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery-container">
+
+    <!-- Gallery Boxes -->
+    <div class="gallery-box">
+      <img src="/images/couples/couple1.png" alt="Image">
+      <div class="prompt" style="display: none;">
+        A stylish young couple posing indoors before warm golden fairy lights. The man wears a beige shirt, black tie, black trousers, formal shoes, and holds a black coat. The woman wears a black velvet saree with a golden border, gold jewelry, bangles, earrings, soft wavy hair, and red lipstick. Both stand confidently with elegant expressions in a classy, festive setting. Faces must match the uploaded images exactly.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/couples/CoupleModel1.png" alt="Image 1">
+      <div class="prompt" style="display: none;">
+       A heartwarming portrait of a young Indian couple standing side by side, smiling at the camera. The background is rustic wooden gate. The man is wearing a light beige shirt with rolled-up sleeves and curly black hair, while the woman is wearing a brown saree with golden border and black blouse, accessorized with silver earings and bangles. The man has his arm around her shoulder. The mood is intimate, natural and softly lit.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/couples/CoupleModel2.png" alt="Image 2">
+      <div class="prompt" style="display: none;">
+         Create the image of a cozy indoor couple portrait in a warm, romantic setting. A young woman and a young man face, hair,body 100% Accuracy from uploaded both images. are standing close together near a white brick wall decorated with glowing yellow fairy lights. The woman is leaning casually against the wall with one leg bent, wearing a cream off-shoulder ribbed sweater, light blue skinny jeans, and white
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/couples/CoupleModel3.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+        the young man sits relaxed in the armchair, one hand touching his chin and his girlfriend stand besides him, her arm gently resting on his. He wears a black t-shirt, ripped black pants and beige sneakers while she wears a stylish modern outlit in beige tone. Both are looking at the camera with soft smiling. The soft lighting highlight their closeness with a minimal modern backdrop. Keep the face of both 100% exactly same as I uploaded the images.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+     <div class="gallery-box">
+      <img src="/images/couples/CoupleModel4.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+        ultra-realistic portrait of a confident Indian Couples posing in romantic mood, female is wearing a deep baingani saree adorned with delicate light pink flowers on the fabric, styled in a modern drape with a matching blouse featuring a that ties at the front. Her outfit highlights her toned and elegant curves, She wears bold baingani bangles, a silver nose ring, A baingani shirt and beige pant full HD 16k. Keep the face 100% same as I uploaded. @aiprompts4me.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Modal -->
+  <div id="promptModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Prompt</h2>
+      <p id="modalPrompt"></p>
+      <button id="copyInModal" class="copy-btn" onclick="copyFromModal()">Copy Prompt</button>
+    </div>
+  </div>
+  <!-- Footer -->
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+      lucide.createIcons(); // render icons
+    });
+</script>
+ <!-- Footer End -->
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

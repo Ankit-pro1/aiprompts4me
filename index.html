@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIPrompts4me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- For icons -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">AIPrompts4me</div>
+  </nav>
+
+  <!-- Main Section -->
+  <section class="main-container">
+    <div class="box" onclick="openGirlsGallery(1)">
+      <img src="/images/girls/Girl.png" alt="Box 1" />
+      <h3>Girls</h3>
+    </div>
+
+     <div class="box" onclick="openBoysGallery(2)">
+       <img src="/images/boys/Boy.png" alt="Box 1" />
+      <h3>Boys</h3>
+    </div>
+
+    <div class="box" onclick="openCouplesGallery(3)">
+      <img src="/images/couples/couple1.png" alt="Box 1" />
+      <h3>Couples</h3>
+    </div>
+  </section>
+  
+ <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+      lucide.createIcons(); // render icons
+    });
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

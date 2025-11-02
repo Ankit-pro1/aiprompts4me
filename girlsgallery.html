@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - AIPrompts4me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- For icons -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">AIPrompts4me</div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="🔍 Search prompts..." 
+      onkeyup="filterPrompts()" 
+    />
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery-container">
+
+    <!-- Gallery Boxes -->
+    <div class="gallery-box">
+      <img src="/images/girls/Model2.png" alt="Image 2">
+      <div class="prompt" style="display: none;">
+        real photo of a beautiful Indian girl in a casual kurti sitting near a window with sunlight touching her face, peaceful expression, minimal background, warm color tone, natural lighting, detailed skin texture, professional portrait style.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/girls/Model1.png" alt="Image 1">
+      <div class="prompt" style="display: none;">
+       ultra-realistic image of an indian girl stands against a backdrop of lush green foliage, illuminated by soft, geometric outdoor lights. She has long, flowing black hair and wears a black halter top with stylish cut-outs, paired with high-waisted, dark denim jeans. Her pose is relaxed, with her head turned slightly to the side, emphasizing her confident expression and subtle makeup. The overall ambiance is modern and chic, highlighting her fashionable outfit amidst the natural setting.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+ 
+
+    <div class="gallery-box">
+      <img src="/images/girls/Model3.png" alt="Image 3">
+      <div class="prompt" style="display: none;">
+        Ultra-realistic photo of a beautiful young woman in a playful, summer-ready black polka-dot co-ord set — an off-the-shoulder ruffled crop top and a matching mini-skirt with a slight drawstring detail. She wears red high-heeled shoes and unique white lace-trimmed ankle socks. Her dark, softly waved hair is styled down with a couple of thin white ribbons tied into the front sections. She is captured in a dynamic, joyful pose as if caught mid-step, smiling naturally. The background shows a bright, sunlit European-style street café with colorful flowers, soft warm lighting, and blurred pedestrians in the distance. The ambiance feels lively, summery, and cinematic. Shot in high-resolution 8K DSLR style, shallow depth of field, realistic shadows and textures, natural tones, no cartoon or CGI effects
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/girls/Model4.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+       a hyper realistic 8K HDR portrait of you seated at a cafe table near a rain-streaked windows. You face the camera three quarters on, with a soft confident smile and slightly narrowed eyes. Your medium-long dark hair is pulled back, revealing gold heart earrings and a fine chain with a teardrop pendant. The girl is wearing a white, rose-print slip dress with thin straps and light side ruching, hands resting gracefully on your lap, bathed in soft natural window bright light. Keep the face 100% exactly same as I uploaded.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+    <div class="gallery-box">
+      <img src="/images/girls/Model5.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+       <div class="gallery-box">
+      <img src="/images/girls/Model4.png" alt="Image 4">
+      <div class="prompt" style="display: none;">
+         Ultra-realistic full body cinematic portraits of an 21 year old woman with exact face from reference, wearing a black floral paint chiffon saree matching blouse, brown jutti open long black and brown volumes straight hairs cute makeup and a circle, and a Fire Boult silver smart watch. Leaning on photo silver staircase railing, left hand holding a sunglasse,  looking into the camera and holding the phone in right hand. Background realistic blurred outdoor staircase.
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+      </div>
+      <div class="icon-bar">
+        <i data-lucide="copy" onclick="copyPrompt(this)"></i>
+        <i data-lucide="eye" onclick="viewPrompt(this)"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Modal -->
+  <div id="promptModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Prompt</h2>
+      <p id="modalPrompt"></p>
+      <button id="copyInModal" class="copy-btn" onclick="copyFromModal()">Copy Prompt</button>
+    </div>
+  </div>
+  <!-- Footer -->
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+      lucide.createIcons(); // render icons
+    });
+</script>
+ <!-- Footer End -->
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
