@@ -21,7 +21,7 @@
     </div>
 
      <div class="box" onclick="openBoysGallery(2)">
-       <img src="/images/boys/Boy.png" alt="Box 1" />
+       <img src="/images/boys/Boy4.png" alt="Box 1" />
       <h3>Boys</h3>
     </div>
 
@@ -32,6 +32,26 @@
   </section>
   
  <div id="footer-placeholder"></div>
+
+<!-- POPUP START -->
+<div id="subscribePopup" class="popup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup()">✖</button>
+    <p>Subscribe YouTube Channel to support ❤️</p>
+    <a href="https://www.youtube.com/@LearningNight"
+       target="_blank"
+       class="popup-btn">
+       Go to YouTube
+    </a>
+  </div>
+</div>
+<!-- POPUP END -->
+
+<script src="script.js"></script>
+
+
+
+
 <script>
   fetch("footer.html")
     .then(res => res.text())
@@ -42,6 +62,6 @@
 </script>
 
 
-  <script src="script.js"></script>
+
 </body>
 </html>

@@ -67,3 +67,30 @@ function filterPrompts() {
     }
   });
 }
+
+// ===== POPUP SCRIPT =====
+
+// Show popup
+function showPopup() {
+  const popup = document.getElementById("subscribePopup");
+  if (popup) {
+    popup.style.display = "flex";
+
+    // Auto-close after 10 seconds
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 10000);
+  }
+}
+
+// Close popup manually
+function closePopup() {
+  const popup = document.getElementById("subscribePopup");
+  if (popup) popup.style.display = "none";
+}
+
+// Trigger popup 10 seconds after page load (every reload)
+window.addEventListener("load", () => {
+  setTimeout(showPopup, 30000); // 10 seconds delay
+});
+
